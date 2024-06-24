@@ -1,0 +1,324 @@
+input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 8px;
+    position: relative; /* Ensure the checkbox is the containing block for the ::before pseudo-element */
+  }
+  
+  input[type="checkbox"]:checked {
+    background-color: #000;
+  }
+  
+  input[type="checkbox"]:checked::before {
+    content: "\2713"; /* Unicode for check mark */
+    font-size: 18px;
+    color: #fff; /* White color for the tick mark */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+  .d-none {
+    display: none;
+  }
+
+  
+  .writetext {
+    animation: fade-in 0.5s forwards; /* add animation effect */
+    animation-fill-mode: both; /* ensure animation is triggered on both show and hide */
+    opacity: 0; /* initial opacity is 0 */
+  }
+  
+  .writetext.show {
+    animation: fade-in 0.5s forwards; /* when showWriteText is true, trigger animation */
+  }
+
+
+
+
+
+  .custom-select {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+.custom-select-selected {
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.custom-select-selected img {
+    margin-right: 8px;
+}
+.custom-select-items {
+    position: absolute;
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    width: 100%;
+    z-index: 99;
+    display: none;
+}
+.custom-select-items div {
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.custom-select-items div:hover {
+    background-color: #f3f4f6;
+}
+.custom-select-items img {
+    margin-right: 8px;
+}
+
+
+* {
+  user-select: none;
+}
+
+*:focus {
+  outline: none;
+}
+
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding-bottom: 100px;
+  margin: 0;
+  background-color: #ebf3f3;
+}
+
+.brd {
+  border: 1px solid #e2eded;
+  border-color: #eaf1f1 #e4eded #dbe7e7 #e4eded;
+}
+
+.custom-select-wrapper {
+  position: relative;
+  width: 450px;
+  height: 37px;
+  margin-left: 20px;
+  
+}
+
+.custom-select {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0 10px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #f9f9f9;
+  font-size: 16px;
+  color: #333;
+}
+
+.custom-select-wrapper::after {
+  content: "\f078";
+  font-family: FontAwesome;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #333;
+}
+
+.custom-select option {
+  padding: 10px;
+}
+
+
+
+.date-picker{
+  position: relative;
+  width: 450px;
+  height: 37px;
+  margin-top:20px ;
+  margin-left: 20px;
+}
+.date-picker input[type="date"] {
+  width: 100%;
+  padding: 10px 40px 10px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  color: #333;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.time-picker-wrapper {
+  position: relative;
+  width: 200px
+}
+
+.time-picker-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #333;
+}
+
+.time-picker {
+  position: relative;
+}
+
+.time-picker input[type="time"] {
+  width: 100%;
+  padding: 10px 40px 10px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.time-picker input[type="time"]::-webkit-inner-spin-button,
+.time-picker input[type="time"]::-webkit-clear-button {
+  display: none;
+}
+
+.time-picker input[type="time"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  color: transparent;
+  background: transparent;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.time-picker input[type="time"]::-webkit-calendar-picker-indicator:after {
+  content: "\f017"; /* Font Awesome clock icon */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #666;
+  font-size: 18px;
+}
+
+.time-picker input[type="time"]:hover,
+.time-picker input[type="time"]:focus {
+  border-color: #888;
+}
+
+.tasktext{
+  margin: 10px;
+}
+
+.input{
+  background-color: #f9f9f9;
+  border: 1px solid #3d3d3d;
+  border-radius:2px ;
+}
+
+.time-select{
+  display: flex;
+  position: relative;
+  width: 450px;
+  height: 37px;
+  margin-top:30px ;
+  margin-left: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+@keyframes moveup {
+  0% {
+    bottom: -25px;
+    opacity: 0;
+  }
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes movedown {
+  0% {
+    top: -25px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(20px); /* add some movement to the animation */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .add-dask{
+    align-items: center;
+    padding: 25px;
+    /* justify-content: center; */
+    
+    
+  }
+  /* Add this to your CSS file */
+
+/* Hide text on mobile devices */
+@media (max-width: 768px) {
+    .tasktext {
+        font-size: 14px;
+
+    }
+    input[type="checkbox"]{
+        width: 15px;
+        height: 15px;
+    }
+    .time {
+        font-size: 14px;
+        margin-right: 1px;
+        height: fit-content;
+        
+    }
+    
+  }
+
+  /* Show text on desktop devices */
+@media (min-width: 769px) {
+    .list li span {
+      display: inline-block;
+    }
+  }

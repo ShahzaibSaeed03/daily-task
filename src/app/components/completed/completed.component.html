@@ -1,0 +1,33 @@
+<div class="head flex items-center justify-between md:flex-wrap lg:flex-nowrap">
+    <div class="name mt-5 mx-10 md:mx-5 lg:mx-10">
+        <p class="text-2xl md:text-xl lg:text-2xl">Good morning, Shahzaib! 👋</p>
+        <span class="text-sm md:text-base lg:text-sm">{{ currentDate }}</span>
+    </div>
+
+    <div class="button bg-white w-28 h-10 rounded-md text-center flex justify-around items-center md:w-20 lg:w-28">
+        <span>&#128071;</span>
+        <p class="text-xl md:text-base lg:text-xl">Today</p>
+    </div>
+</div>
+<hr>
+<br>
+<div class="container cursor-pointer">
+    <ng-container *ngFor="let item of TaskList">
+        <div class="task bg-white max-h-fit flex justify-between mt-2">
+            <div class="tasktext flex items-center justify-center">
+                <p class="tasktext text-xl md:text-base min-w-full lg:text-xl">{{ item.title }}</p>
+            </div>
+            <div class="timeMain flex justify-center items-center">
+                <div class="time bg-gray-100 text-center pt-1 mr-10 max-w-fit max-h-fit rounded-sm">
+                    <p>{{ item.time }}</p>
+                </div>
+                <span>
+                    <img src="assets/img/delete.png" alt="Delete" class="h-6 mr-3" (click)="deleteTask(item.id)">
+                </span>
+            </div>
+        </div>
+    </ng-container>
+</div>
+
+
+
