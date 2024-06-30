@@ -34,4 +34,8 @@ exports.handler = (event, context) => {
       }
     });
   });
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> 8c5935ac63f90acfc8236c7822604ec36044e07e
